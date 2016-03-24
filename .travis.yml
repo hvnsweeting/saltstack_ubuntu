@@ -15,4 +15,4 @@ before_install:
 install: true
 
 script:
-  - docker run hvnsweeting/saltstack_ubuntu /bin/sh -c "salt-call -c /root/salt/states/test state.sls vim.test"
+  - docker run hvnsweeting/saltstack_ubuntu /bin/sh -c "salt-call -c /root/salt/states/test state.sls pip.test"
