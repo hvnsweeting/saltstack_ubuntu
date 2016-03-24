@@ -1,9 +1,9 @@
 sudo: required
 
-language: go
+language: python
 
 go:
-  - 1.6
+  - 2.7
 
 services:
   - docker
@@ -11,6 +11,8 @@ services:
 before_install:
   - docker build -t hvnsweeting/saltstack_ubuntu .
   - docker ps -a
+
+install: true
 
 script:
   - docker run carlad/sinatra /bin/sh -c "salt-call -c /root/salt/states/test state.sls vim.test"
