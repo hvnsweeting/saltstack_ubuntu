@@ -4,7 +4,7 @@ import logging
 import re
 import subprocess as spr
 
-logging.basicConfig()
+logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 success_pattern = re.compile('^Failed:\s.+0$')
