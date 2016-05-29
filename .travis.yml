@@ -15,4 +15,4 @@ before_install:
 install: true
 
 script:
-  - docker run -v runner.py:/app/runner.py hvnsweeting/saltstack_ubuntu runner.py
+  - docker run -v runner.py:/app/runner.py hvnsweeting/saltstack_ubuntu /app/runner.py
