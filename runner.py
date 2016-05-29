@@ -9,6 +9,7 @@ logger = logging.getLogger(__name__)
 
 success_pattern = re.compile('^Failed:\s.+0$')
 FORMULAS = ('vim', 'xml', 'virtualenv', 'pip')
+SEPARATOR = '*' * 50
 
 
 def main():
@@ -21,8 +22,10 @@ def main():
 
         out = spr.check_output(cmd)
         if success_pattern.findall(out):
+            logger.info(SEPARATOR)
             logger.info("Test %s: successful.", formula)
         else:
+            logger.info(SEPARATOR)
             logger.info("Test %s: failed", formula)
             logger.info(out)
 
