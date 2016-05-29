@@ -7,7 +7,7 @@ import subprocess as spr
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-success_pattern = re.compile('^Failed:\s+0$')
+success_pattern = re.compile('^Failed:\s+0')
 FORMULAS = ('vim', 'xml', 'virtualenv', 'pip')
 SEPARATOR = '*' * 50
 
