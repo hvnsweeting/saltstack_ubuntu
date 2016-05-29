@@ -1,6 +1,7 @@
 FROM ubuntu:14.04
 MAINTAINER Viet Hung Nguyen <hvn@familug.org>
 
+ADD . /app
 RUN apt-get update
 RUN apt-get install -y curl
 RUN curl https://repo.saltstack.com/apt/ubuntu/14.04/amd64/latest/SALTSTACK-GPG-KEY.pub | sudo apt-key add -
